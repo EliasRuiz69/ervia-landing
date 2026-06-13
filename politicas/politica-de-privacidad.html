@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – ERVIA</title>
+  <meta name="description" content="Política de Privacidad de ERVIA, agencia de automatización e inteligencia artificial con sede en Mérida, Yucatán, México." />
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-blue:    #1E3A5F;
+      --brand-accent:  #2E86AB;
+      --brand-light:   #E8F4F8;
+      --text-main:     #1A1A2E;
+      --text-muted:    #555770;
+      --bg:            #FAFBFC;
+      --white:         #FFFFFF;
+      --border:        #DEE3EC;
+      --radius:        10px;
+      --font:          'Segoe UI', Arial, sans-serif;
+      --max-width:     860px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-main);
+      background: var(--bg);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--brand-blue);
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+
+    .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; }
+
+    .logo-badge {
+      width: 52px; height: 52px;
+      background: var(--brand-accent);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; font-weight: 900; color: white; letter-spacing: -1px;
+    }
+
+    .logo-text { font-size: 28px; font-weight: 800; color: white; letter-spacing: 2px; }
+
+    header h1 {
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .header-meta {
+      margin-top: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand-accent);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    .intro-card strong { color: var(--brand-blue); }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 560px) { .toc ol { grid-template-columns: 1fr; } }
+
+    .toc li a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex; align-items: baseline; gap: 6px;
+    }
+
+    .toc li a:hover { color: var(--brand-accent); text-decoration: underline; }
+
+    .toc-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-accent);
+      min-width: 20px;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 20px;
+    }
+
+    h2.section-title {
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      color: var(--brand-blue);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--brand-accent);
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      min-width: 30px; height: 30px;
+      background: var(--brand-accent);
+      color: white;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      margin: 24px 0 10px;
+    }
+
+    p { margin-bottom: 14px; color: var(--text-main); }
+
+    /* ── LISTS ── */
+    ul.policy-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    ul.policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    ul.policy-list li:last-child { border-bottom: none; }
+
+    ul.policy-list li::before {
+      content: '›';
+      color: var(--brand-accent);
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+      line-height: 1.5;
+    }
+
+    ul.policy-list li strong { color: var(--brand-blue); }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--brand-light);
+      border: 1px solid var(--brand-accent);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .highlight-box.warning {
+      background: #FFF8E6;
+      border-color: #E0A020;
+    }
+
+    /* ── CONTACT TABLE ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px 20px;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+
+    .contact-grid dt { font-weight: 700; color: var(--brand-blue); }
+    .contact-grid dd { color: var(--text-main); }
+    .contact-grid a { color: var(--brand-accent); text-decoration: none; }
+    .contact-grid a:hover { text-decoration: underline; }
+
+    /* ── RIGHTS GRID ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .right-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .right-card .right-letter {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--brand-accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .right-card h4 { font-size: 14px; font-weight: 700; color: var(--brand-blue); margin-bottom: 4px; }
+    .right-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brand-blue);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+    }
+
+    footer strong { color: white; }
+    footer a { color: var(--brand-accent); text-decoration: none; }
+
+    /* ── BACK TO TOP ── */
+    .back-to-top {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--brand-accent);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-to-top:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────────────────────── -->
+<header id="top">
+  <div class="logo-wrap">
+    <div class="logo-badge">E</div>
+    <span class="logo-text">ERVIA</span>
+  </div>
+  <h1>Política de Privacidad</h1>
+  <p class="header-meta">Última actualización: junio de 2025 &nbsp;·&nbsp; ervia.tech</p>
+</header>
+
+<!-- ── MAIN ────────────────────────────────────────────────────────────────── -->
+<main class="container">
+
+  <!-- Intro -->
+  <div class="intro-card">
+    <strong>Aviso de Privacidad</strong> — En cumplimiento de la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> y de los lineamientos del <strong>INAI</strong>, ERVIA pone a su disposición la presente Política de Privacidad. Al utilizar este sitio o contratar nuestros servicios, usted acepta los términos aquí descritos.
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice de contenido">
+    <h2>Contenido</h2>
+    <ol>
+      <li><a href="#s1"><span class="toc-num">01</span> Introducción</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span> Identidad del Responsable</a></li>
+      <li><a href="#s3"><span class="toc-num">03</span> Datos que Recopilamos</a></li>
+      <li><a href="#s4"><span class="toc-num">04</span> Finalidades del Tratamiento</a></li>
+      <li><a href="#s5"><span class="toc-num">05</span> Base Legal</a></li>
+      <li><a href="#s6"><span class="toc-num">06</span> Transferencia a Terceros</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span> Cookies</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span> Derechos ARCO</a></li>
+      <li><a href="#s9"><span class="toc-num">09</span> Medidas de Seguridad</a></li>
+      <li><a href="#s10"><span class="toc-num">10</span> Plazos de Conservación</a></li>
+      <li><a href="#s11"><span class="toc-num">11</span> Menores de Edad</a></li>
+      <li><a href="#s12"><span class="toc-num">12</span> Cambios a esta Política</a></li>
+      <li><a href="#s13"><span class="toc-num">13</span> Legislación y Jurisdicción</a></li>
+      <li><a href="#s14"><span class="toc-num">14</span> Contacto e INAI</a></li>
+    </ol>
+  </nav>
+
+  <!-- ── S1 ── -->
+  <section id="s1">
+    <h2 class="section-title"><span class="section-number">1</span> Introducción</h2>
+    <p><strong>ERVIA</strong> es una agencia de automatización e inteligencia artificial constituida conforme a la legislación mexicana, con domicilio en Mérida, Yucatán, México. La presente Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos los datos personales de quienes visitan o interactúan con nuestro sitio web <strong>ervia.tech</strong> y con nuestros servicios.</p>
+    <p>Al utilizar nuestro Sitio o contratar nuestros servicios, usted acepta los términos aquí descritos. Si no está de acuerdo con alguno de ellos, le rogamos que se abstenga de utilizar el Sitio.</p>
+  </section>
+
+  <!-- ── S2 ── -->
+  <section id="s2">
+    <h2 class="section-title"><span class="section-number">2</span> Identidad y Domicilio del Responsable</h2>
+    <p>El responsable del tratamiento de sus datos personales es:</p>
+    <dl class="contact-grid">
+      <dt>Nombre comercial</dt><dd>ERVIA</dd>
+      <dt>Actividad</dt><dd>Agencia de automatización e inteligencia artificial para pymes</dd>
+      <dt>Domicilio</dt><dd>Mérida, Yucatán, México</dd>
+      <dt>Sitio web</dt><dd><a href="https://ervia.tech" target="_blank" rel="noopener">https://ervia.tech</a></dd>
+      <dt>Correo electrónico</dt><dd><a href="mailto:info@ervia.tech">info@ervia.tech</a></dd>
+    </dl>
+  </section>
+
+  <!-- ── S3 ── -->
+  <section id="s3">
+    <h2 class="section-title"><span class="section-number">3</span> Datos Personales que Recopilamos</h2>
+
+    <h3>3.1 Datos de identificación y contacto</h3>
+    <ul class="policy-list">
+      <li>Nombre y apellidos</li>
+      <li>Dirección de correo electrónico</li>
+      <li>Número de teléfono o WhatsApp</li>
+      <li>Nombre de la empresa y cargo</li>
+    </ul>
+
+    <h3>3.2 Datos de navegación y uso del Sitio</h3>
+    <ul class="policy-list">
+      <li>Dirección IP y tipo de navegador</li>
+      <li>Páginas visitadas y tiempo de permanencia</li>
+      <li>Origen del tráfico (búsqueda orgánica, redes sociales, etc.)</li>
+      <li>Dispositivo y sistema operativo utilizado</li>
+    </ul>
+
+    <h3>3.3 Datos de interacción con agentes de IA</h3>
+    <p>Cuando usted interactúa con agentes conversacionales de WhatsApp u otros canales desplegados por ERVIA en nombre de sus clientes, podemos procesar:</p>
+    <ul class="policy-list">
+      <li>Mensajes de texto y archivos compartidos en la conversación</li>
+      <li>Información de contacto de WhatsApp (nombre de perfil y número)</li>
+      <li>Solicitudes, consultas y preferencias expresadas</li>
+    </ul>
+
+    <div class="highlight-box">
+      <strong>Datos sensibles:</strong> ERVIA no recopila datos personales sensibles (salud, creencias religiosas, orientación sexual, origen racial o étnico) salvo que el servicio específico así lo requiera, en cuyo caso se obtendrá su consentimiento expreso.
+    </div>
+  </section>
+
+  <!-- ── S4 ── -->
+  <section id="s4">
+    <h2 class="section-title"><span class="section-number">4</span> Finalidades del Tratamiento</h2>
+
+    <h3>4.1 Finalidades primarias — necesarias para la prestación del servicio</h3>
+    <ul class="policy-list">
+      <li>Atender solicitudes de información, cotizaciones y demostraciones</li>
+      <li>Gestionar y ejecutar los contratos de servicios de automatización e IA</li>
+      <li>Proporcionar soporte técnico y seguimiento a proyectos</li>
+      <li>Emitir facturas y gestionar cobros</li>
+    </ul>
+
+    <h3>4.2 Finalidades secundarias — puede oponerse a estas</h3>
+    <ul class="policy-list">
+      <li>Envío de boletines informativos y actualizaciones sobre nuestros servicios</li>
+      <li>Realización de encuestas de satisfacción</li>
+      <li>Difusión de casos de éxito y materiales de marketing (siempre de forma anónima o con su autorización expresa)</li>
+      <li>Análisis estadísticos internos para mejorar nuestros servicios</li>
+    </ul>
+
+    <div class="highlight-box warning">
+      Si usted no desea que sus datos sean tratados para las finalidades secundarias, envíe un correo a <a href="mailto:info@ervia.tech"><strong>info@ervia.tech</strong></a> con el asunto <em>"Oposición a finalidades secundarias"</em>.
+    </div>
+  </section>
+
+  <!-- ── S5 ── -->
+  <section id="s5">
+    <h2 class="section-title"><span class="section-number">5</span> Base Legal del Tratamiento</h2>
+    <ul class="policy-list">
+      <li><strong>Consentimiento:</strong> Cuando usted nos contacta, completa un formulario o acepta expresamente esta política</li>
+      <li><strong>Ejecución de contrato:</strong> Cuando el tratamiento es necesario para cumplir con los servicios contratados</li>
+      <li><strong>Obligación legal:</strong> Cuando la ley mexicana nos obliga a conservar ciertos registros (fiscales, contables, etc.)</li>
+      <li><strong>Interés legítimo:</strong> Para el análisis de seguridad del Sitio y prevención del fraude</li>
+    </ul>
+  </section>
+
+  <!-- ── S6 ── -->
+  <section id="s6">
+    <h2 class="section-title"><span class="section-number">6</span> Transferencia de Datos a Terceros</h2>
+    <p>ERVIA puede compartir sus datos con las siguientes categorías de terceros, siempre bajo estrictos acuerdos de confidencialidad:</p>
+    <ul class="policy-list">
+      <li><strong>Proveedores de infraestructura tecnológica:</strong> Plataformas de nube para el funcionamiento de los agentes de IA</li>
+      <li><strong>Proveedores de IA:</strong> Anthropic (API de Claude) para el procesamiento de conversaciones. Las políticas de Anthropic se rigen por sus propios términos</li>
+      <li><strong>Plataformas de mensajería:</strong> YCloud u otros proveedores de WhatsApp Business API para la entrega de mensajes</li>
+      <li><strong>Contadores y asesores legales:</strong> Únicamente para cumplir obligaciones fiscales o legales</li>
+      <li><strong>Autoridades competentes:</strong> Cuando así lo exija la ley mexicana</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>ERVIA no vende, renta ni comercializa sus datos personales a terceros con fines publicitarios.</strong>
+    </div>
+  </section>
+
+  <!-- ── S7 ── -->
+  <section id="s7">
+    <h2 class="section-title"><span class="section-number">7</span> Uso de Cookies y Tecnologías de Rastreo</h2>
+    <p>Nuestro Sitio puede utilizar cookies y tecnologías similares para mejorar su experiencia de navegación:</p>
+    <ul class="policy-list">
+      <li><strong>Cookies estrictamente necesarias:</strong> Imprescindibles para el funcionamiento básico del Sitio. No requieren consentimiento</li>
+      <li><strong>Cookies analíticas:</strong> Nos permiten entender cómo los usuarios navegan el Sitio (por ejemplo, mediante Google Analytics). Requieren su consentimiento</li>
+      <li><strong>Cookies de preferencias:</strong> Recuerdan sus preferencias de idioma o región</li>
+    </ul>
+    <p>Puede gestionar o deshabilitar las cookies desde la configuración de su navegador. La desactivación de algunas cookies puede afectar la funcionalidad del Sitio.</p>
+  </section>
+
+  <!-- ── S8 ── -->
+  <section id="s8">
+    <h2 class="section-title"><span class="section-number">8</span> Derechos ARCO y Cómo Ejercerlos</h2>
+    <p>De conformidad con la LFPDPPP, usted tiene los siguientes derechos:</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="right-letter">A</div>
+        <h4>Acceso</h4>
+        <p>Conocer qué datos tenemos sobre usted, para qué los usamos y las condiciones del tratamiento</p>
+      </div>
+      <div class="right-card">
+        <div class="right-letter">R</div>
+        <h4>Rectificación</h4>
+        <p>Solicitar la corrección de sus datos cuando sean inexactos o incompletos</p>
+      </div>
+      <div class="right-card">
+        <div class="right-letter">C</div>
+        <h4>Cancelación</h4>
+        <p>Solicitar que sus datos sean eliminados o bloqueados cuando no sean necesarios para las finalidades declaradas</p>
+      </div>
+      <div class="right-card">
+        <div class="right-letter">O</div>
+        <h4>Oposición</h4>
+        <p>Oponerse al tratamiento de sus datos para finalidades secundarias o específicas</p>
+      </div>
+    </div>
+
+    <p>Adicionalmente, puede solicitar la <strong>revocación de su consentimiento</strong> y la <strong>portabilidad</strong> de sus datos en formato estructurado.</p>
+
+    <h3>Procedimiento para ejercer sus derechos</h3>
+    <p>Envíe un correo a <a href="mailto:info@ervia.tech"><strong>info@ervia.tech</strong></a> con el asunto <em>"Solicitud ARCO"</em>, incluyendo:</p>
+    <ul class="policy-list">
+      <li>Nombre completo y datos de contacto</li>
+      <li>Descripción clara del derecho que desea ejercer</li>
+      <li>Documento que acredite su identidad (INE, pasaporte u otro documento oficial)</li>
+    </ul>
+    <div class="highlight-box">
+      Daremos respuesta a su solicitud en un plazo máximo de <strong>20 días hábiles</strong> contados a partir de su recepción, conforme a lo establecido en la LFPDPPP.
+    </div>
+  </section>
+
+  <!-- ── S9 ── -->
+  <section id="s9">
+    <h2 class="section-title"><span class="section-number">9</span> Medidas de Seguridad</h2>
+    <p>ERVIA implementa medidas técnicas, administrativas y físicas para proteger sus datos personales:</p>
+    <ul class="policy-list">
+      <li>Cifrado SSL/TLS en todas las comunicaciones del Sitio</li>
+      <li>Alojamiento en servidores con acceso restringido y autenticación reforzada</li>
+      <li>Control de acceso basado en roles para el personal de ERVIA</li>
+      <li>Revisiones periódicas de seguridad de la infraestructura</li>
+      <li>Acuerdos de confidencialidad con todos los proveedores que acceden a datos</li>
+    </ul>
+  </section>
+
+  <!-- ── S10 ── -->
+  <section id="s10">
+    <h2 class="section-title"><span class="section-number">10</span> Plazos de Conservación de los Datos</h2>
+    <ul class="policy-list">
+      <li><strong>Datos de contacto y clientes activos:</strong> Durante la vigencia de la relación comercial y hasta 3 años después de su término</li>
+      <li><strong>Datos fiscales y contables:</strong> 5 años, conforme al Código Fiscal de la Federación</li>
+      <li><strong>Conversaciones de agentes IA:</strong> El período que establezca el contrato con el cliente; por defecto, 90 días</li>
+      <li><strong>Datos de navegación:</strong> Hasta 26 meses</li>
+    </ul>
+  </section>
+
+  <!-- ── S11 ── -->
+  <section id="s11">
+    <h2 class="section-title"><span class="section-number">11</span> Menores de Edad</h2>
+    <p>Nuestros servicios están dirigidos exclusivamente a empresas y profesionales mayores de 18 años. ERVIA no recopila intencionalmente datos personales de menores de edad. Si detectamos que se han recopilado datos de un menor sin el consentimiento de sus padres o tutores legales, procederemos a eliminarlos de inmediato.</p>
+  </section>
+
+  <!-- ── S12 ── -->
+  <section id="s12">
+    <h2 class="section-title"><span class="section-number">12</span> Cambios a esta Política de Privacidad</h2>
+    <p>ERVIA se reserva el derecho de modificar la presente Política en cualquier momento para adaptarla a cambios legislativos, jurisprudenciales o de negocio. Cualquier modificación será comunicada mediante la publicación de la versión actualizada en este Sitio, con indicación de la fecha de última actualización. El uso continuado del Sitio tras la publicación de cambios implica la aceptación de los mismos.</p>
+  </section>
+
+  <!-- ── S13 ── -->
+  <section id="s13">
+    <h2 class="section-title"><span class="section-number">13</span> Legislación Aplicable y Jurisdicción</h2>
+    <p>Esta Política de Privacidad se rige por la legislación mexicana aplicable, en particular:</p>
+    <ul class="policy-list">
+      <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</li>
+      <li>Reglamento de la LFPDPPP</li>
+      <li>Lineamientos del Aviso de Privacidad publicados por el INAI</li>
+    </ul>
+    <p>Para cualquier controversia derivada de esta Política, las partes se someten a la jurisdicción de los tribunales competentes de <strong>Mérida, Yucatán, México</strong>, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+  </section>
+
+  <!-- ── S14 ── -->
+  <section id="s14">
+    <h2 class="section-title"><span class="section-number">14</span> Contacto y Quejas ante el INAI</h2>
+    <p>Para cualquier duda, solicitud o queja relacionada con el tratamiento de sus datos personales, contáctenos en:</p>
+    <dl class="contact-grid">
+      <dt>Correo</dt><dd><a href="mailto:info@ervia.tech">info@ervia.tech</a></dd>
+      <dt>Sitio web</dt><dd><a href="https://ervia.tech" target="_blank" rel="noopener">https://ervia.tech</a></dd>
+    </dl>
+    <div class="highlight-box">
+      Si considera que su solicitud no fue atendida satisfactoriamente, puede acudir ante el <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong>: <a href="https://home.inai.org.mx" target="_blank" rel="noopener">https://home.inai.org.mx</a>
+    </div>
+
+    <a href="#top" class="back-to-top">↑ Volver al inicio</a>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ───────────────────────────────────────────────────────────────── -->
+<footer>
+  <p><strong>ERVIA</strong> – Automatización e Inteligencia Artificial para tu negocio</p>
+  <p style="margin-top:6px;">Mérida, Yucatán, México &nbsp;·&nbsp; <a href="mailto:info@ervia.tech">info@ervia.tech</a> &nbsp;·&nbsp; <a href="https://ervia.tech">ervia.tech</a></p>
+  <p style="margin-top:10px;">© 2025 ERVIA. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
